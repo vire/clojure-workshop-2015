@@ -5,10 +5,29 @@
               [clojure-workshop.subs]
               [clojure-workshop.views :as views]))
 
-(defn mount-root []
-  (reagent/render [views/main-panel]
-                  (.getElementById js/document "app")))
+(def state (reagent/atom 0))
 
-(defn ^:export init [] 
+(defn component-w-state []
+  (let [a (reagent/atom 0)]
+    (fn []
+      [
+       :div "Value of the counter is: " @a
+       [:button {:on-click #(swap! a inc)} "inc"]
+       ]
+      )
+    )
+  )
+
+(defn mount-root []
+  (reagent/render
+   [
+    :div
+    [views/smart-counter state]
+    [component-w-state]
+    views/my-first-component "TestName"]
+   (.getElementById js/document "app")))
+
+
+(defn ^:export init []
   (re-frame/dispatch-sync [:initialize-db])
   (mount-root))
