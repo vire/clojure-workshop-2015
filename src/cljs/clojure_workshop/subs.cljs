@@ -6,3 +6,8 @@
  :name
  (fn [db]
    (reaction (:name @db))))
+
+(re-frame/register-sub
+ :counter
+ (fn [db]
+   (reaction (:counter @db))))

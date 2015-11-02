@@ -7,24 +7,10 @@
 
 (def state (reagent/atom 0))
 
-(defn component-w-state []
-  (let [a (reagent/atom 0)]
-    (fn []
-      [
-       :div "Value of the counter is: " @a
-       [:button {:on-click #(swap! a inc)} "inc"]
-       ]
-      )
-    )
-  )
+(enable-console-print!)
 
 (defn mount-root []
-  (reagent/render
-   [
-    :div
-    [views/smart-counter state]
-    [component-w-state]
-    views/my-first-component "TestName"]
+  (reagent/render [views/comp-with-state]
    (.getElementById js/document "app")))
 
 
