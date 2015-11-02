@@ -1,0 +1,2 @@
+;; Analyzed by ClojureScript 0.0-3211
+{:use-macros nil, :excludes #{}, :name clojure-workshop.db, :imports nil, :requires nil, :uses nil, :defs {default-db {:meta {:end-column 16, :end-line 3, :column 6, :line 3, :file "/home/vire/workspace/tmp/clojure-workshop/src/cljs/clojure_workshop/db.cljs"}, :file "src/cljs/clojure_workshop/db.cljs", :line 3, :column 1, :end-line 3, :end-column 16, :test true, :name clojure-workshop.db/default-db}}, :require-macros nil, :cljs.analyzer/constants {:order [:name], :seen #{:name}}, :doc nil}

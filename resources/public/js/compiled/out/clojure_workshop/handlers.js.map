@@ -1,0 +1,1 @@
+{"version":3,"file":"\/home\/vire\/workspace\/tmp\/clojure-workshop\/resources\/public\/js\/compiled\/out\/clojure_workshop\/handlers.js","sources":["handlers.cljs?rel=1446451736251"],"lineCount":10,"mappings":";AAAA;;;;AAIA,yCAAA,zCAACA,+GAEA,WAAMC,EAAEA;AAAR,AACEC","names":["re-frame.core\/register-handler","_","clojure-workshop.db\/default-db"]}
